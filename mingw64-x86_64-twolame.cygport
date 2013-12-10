@@ -1,0 +1,20 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-twolame"
+VERSION=0.3.13
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Optimized MP2 encoder for Win64 toolchain"
+DESCRIPTION="TwoLAME is an optimised MPEG Audio Layer 2 (MP2) encoder based
+on tooLAME by Mike Cheng, which in turn is based upon the ISO dist10 code and
+portions of LAME."
+HOMEPAGE="http://www.twolame.org/"
+SRC_URI="mirror://sourceforge/twolame/twolame-${VERSION}.tar.gz"
+SRC_DIR="twolame-${VERSION}"
+PATCH_URI="
+	0.3.12-no-undefined.patch
+	0.3.13-dllexport.patch
+"
+
+MAKEOPTS+=" bin_PROGRAMS= man_MANS= pkgdoc_DATA= pkghtml_DATA= "

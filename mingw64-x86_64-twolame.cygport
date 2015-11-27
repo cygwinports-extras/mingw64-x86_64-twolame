@@ -3,7 +3,7 @@ inherit cross
 
 NAME="mingw64-x86_64-twolame"
 VERSION=0.3.13
-RELEASE=1
+RELEASE=2
 CATEGORY="Devel"
 SUMMARY="Optimized MP2 encoder for Win64 toolchain"
 DESCRIPTION="TwoLAME is an optimised MPEG Audio Layer 2 (MP2) encoder based

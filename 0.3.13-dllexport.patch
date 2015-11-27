@@ -7,7 +7,7 @@
  lib_LTLIBRARIES = libtwolame.la
  include_HEADERS = twolame.h
 --- origsrc/twolame-0.3.13/libtwolame/twolame.h	2011-01-01 13:15:01.000000000 -0600
-+++ src/twolame-0.3.13/libtwolame/twolame.h	2013-12-09 18:11:54.012116000 -0600
++++ src/twolame-0.3.13/libtwolame/twolame.h	2015-11-24 00:12:32.476903000 -0600
 @@ -44,8 +44,12 @@ extern "C" {
  #define DLL_EXPORT
  #else
@@ -21,3 +21,12 @@
  #define DLL_EXPORT __declspec(dllimport)
  #endif
  #endif
+@@ -253,7 +257,7 @@ extern "C" {
+  *	\return					The number of bytes put in output buffer
+  *							or a negative value on error
+  */
+-    int twolame_encode_buffer_float32_interleaved(twolame_options * glopts,
++    DLL_EXPORT int twolame_encode_buffer_float32_interleaved(twolame_options * glopts,
+                                                   const float pcm[],
+                                                   int num_samples,
+                                                   unsigned char *mp2buffer, int mp2buffer_size);
